@@ -1,0 +1,65 @@
+.example {
+  box-shadow: 0 0 0 3px #a00;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  user-select: none;
+  background-image: linear-gradient(to bottom, #ddd, #000);
+  color: hwb(90, 0%, 0%, .5);
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.gray {
+  color: gray(85);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* custom properties set and apply */
+:root {
+  --danger-theme: {
+    color: #fff;
+    background-color: #a00;
+  }
+}
+
+.danger {
+  @apply --danger-theme;
+}
+
+/* calc safety */
+:root {
+  --fontSize: 1rem;
+}
+h1 {
+  font-size: calc(var(--fontSize) * 2);
+}
+
+/* custom media queries */
+@custom-media --small-viewport (max-width: 50em);
+
+@media only screen and (--small-viewport) {
+
+}
+
+/* nesting */
+a {
+  & span {
+    font-size: 1rem;
+  }
+}
+
+/* :matches */
+p:matches(:first-child, .special) {
+  color: #a00;
+}
+
+/* :not */
+p:not(:first-child, .special) {
+  color: gray(85);
+}

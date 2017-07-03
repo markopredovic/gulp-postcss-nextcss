@@ -1,0 +1,66 @@
+.example {
+  box-shadow: 0 0 0 3px #a00;
+  box-sizing: border-box;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: linear-gradient(to bottom, #ddd, #000);
+  color: rgba(128, 255, 0, .5);
+}
+
+.blur {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.gray {
+  color: rgb(85, 85, 85);
+}
+
+h3 {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+}
+
+/* custom properties set and apply */
+
+.danger {
+    color: #fff;
+    background-color: #a00;
+}
+
+/* calc safety */
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+/* custom media queries */
+
+@media only screen and (max-width: 50em) {
+
+}
+
+/* nesting */
+a {
+}
+a span {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+/* :matches */
+p:first-child, p.special {
+  color: #a00;
+}
+
+/* :not */
+p:not(:first-child):not(.special) {
+  color: rgb(85, 85, 85);
+}
