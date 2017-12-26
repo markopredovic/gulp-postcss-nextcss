@@ -1,0 +1,4 @@
+branch:
+---------------------------
+git checkout -b <branch_name>
+git checkout - ( switching between 2 branches )
