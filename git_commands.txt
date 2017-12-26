@@ -2,3 +2,12 @@ branch:
 ---------------------------
 git checkout -b <branch_name>
 git checkout - ( switching between 2 branches )
+
+delete branch:
+---------------------------
+git branch -d <branch_name>
+
+git stash:
+--------------------------
+git stash
+git stash apply
